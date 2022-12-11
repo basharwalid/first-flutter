@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:project/employeeprofile.dart';
 
 import 'homescreen.dart';
 
@@ -13,8 +14,12 @@ class myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      routes: {
+        HomeScreen.routeName : (_) => HomeScreen(),
+        employeeprofile.routeName :(_) => employeeprofile(),
+      },
+      initialRoute: HomeScreen.routeName,
       debugShowCheckedModeBanner: false,
-       home: HomeScreen(),
     );
   }
 }
